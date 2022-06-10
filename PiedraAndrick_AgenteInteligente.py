@@ -24,4 +24,25 @@ def irrigation_System():
     for llave, valor in estado_global.items():
         estado_global[llave]= random.randint(0, 1)
 
+    '''Bucle for que permie comprobar primeramente el estado de la humedad del suelo,
+    
+        luego se crea otro bucle que recorre los estados globales comprobando el estado del suelo'''
+    
+    for llave_humedad, value_humedad in suelo_humedad.items():
+        try:
+            if humedad_suelo == value_humedad:
+                print("Humedad del suelo "+str(llave_humedad))
+                print("Estado Global:" + str(estado_global))
+                for llave_estado, value_estado in estado_global.items():
+                        if value_estado ==1:
+                          print(str(llave_estado)+" con tierra humeda")
+                        #si la habitacion se encuentra en estado 1(fria) entonces
+                        if value_estado==0:
+                          #Habitacion esta fria
+                          print(str(llave_estado)+" con tierra seca. Regando Parcela! ")
+                          estado_global[llave_estado] = 1
+                          costo_agua = costo_agua+1 * humedad_suelo
+        except:
+            print("Ingrese valor entre 0 y 1")
+
 irrigation_System()
