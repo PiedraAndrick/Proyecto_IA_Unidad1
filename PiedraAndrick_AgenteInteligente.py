@@ -41,20 +41,21 @@ def sistemaRiego():
                     print("Humedad del suelo "+str(llave_humedad))
                     print("Estado Global:" + str(estado_global))
                     for llave_estado, value_estado in estado_global.items():
+                            #si la parcela se encuentra en estado 1 entonces
                             if value_estado ==1:
                               print(str(llave_estado)+" con tierra humeda")
-                            #si la habitacion se encuentra en estado 1(fria) entonces
+                            #si la parcela se encuentra en estado 0 entonces
                             if value_estado==0:
-                              #Habitacion esta fria
+                              #Cambia al estado 1
                               print(str(llave_estado)+" con tierra seca. Regando Parcela! ")
                               estado_global[llave_estado] = 1
                               costo_agua = costo_agua+1
-                        
-            
-            
+                            else:
+                                print("Algo salio mal")
+
         ''''Se multiplica el costo del agua con la humedad para sacar un costo total '''
         costo_agua =costo_agua* humedad_suelo
-        5
+    
         
         ''' Se procede a desarrollar la muestra de datos en el que se 
         le da un toque estetico a la visualizacion de los resultados'''
