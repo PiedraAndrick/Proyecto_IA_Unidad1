@@ -13,4 +13,13 @@ def irrigation_System():
     '''Estados Posibles de la humedad de suelo'''
     suelo_humedad={'bajo':3, 'medio':2,'alto':1}
 
+    '''Estados Posibles del suelo'''
+    suelo_estados={'seco':0,'humedo':1}
+    
+    '''Estados globales inicializados en 0, para posteriormente agregar valores randoms'''
+    estado_global = {'Parcela_1': 0 , 'Parcela_2': 0,'Parcela_3': 0,
+                     'Parcela_4': 0 , 'Parcela_5': 0,'Parcela_6': 0,
+                     'Parcela_7': 0
+                     }
+                     
 irrigation_System()
