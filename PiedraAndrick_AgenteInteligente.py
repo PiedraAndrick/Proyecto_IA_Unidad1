@@ -21,5 +21,7 @@ def irrigation_System():
                      'Parcela_4': 0 , 'Parcela_5': 0,'Parcela_6': 0,
                      'Parcela_7': 0
                      }
-                     
+    for llave, valor in estado_global.items():
+        estado_global[llave]= random.randint(0, 1)
+
 irrigation_System()
