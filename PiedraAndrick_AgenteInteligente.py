@@ -44,5 +44,15 @@ def irrigation_System():
                           costo_agua = costo_agua+1 * humedad_suelo
         except:
             print("Ingrese valor entre 0 y 1")
+        
+    
+    ''' Se procede a desarrollar la muestra de datos en el que se 
+        le da un toque estetico a la visualizacion de los resultados'''
+    print("Estado Global de las Parcelas: ")
+    for key, value in estado_global.items():
+        lista_de_llave = list(suelo_estados.keys())
+        posision=list(suelo_estados.values()).index(value)
+        print(str(key)+" en estado "+str(lista_de_llave[posision]) )
+    print("Medida de desempeño - Costo en Agua: " + str(costo_agua))
 
 irrigation_System()
