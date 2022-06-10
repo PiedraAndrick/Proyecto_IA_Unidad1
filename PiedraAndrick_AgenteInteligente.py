@@ -1,6 +1,6 @@
 import random
 
-def airConditioning_world():
+def sistemaRiego():
 #Costo inicial
     costo_agua = 0
     '''Estados Posibles de la humedad de suelo'''
@@ -67,4 +67,4 @@ def airConditioning_world():
     
     else:
         print("Ingresa una humedad del suelo entre 0 y 2")
-airConditioning_world()
+sistemaRiego()
